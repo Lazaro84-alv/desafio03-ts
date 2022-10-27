@@ -1,10 +1,20 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Box, Center, Input } from '@chakra-ui/react';
 import { login } from '../services/login';
 import { DButton } from './DButton';
+import { api } from '../api';
 
 export const Card = () => {
   const [ email, setEmail ] = useState('');
+
+  useEffect(() => {
+    const getData = async () => {
+      const data = await api
+      console.log(data)
+    }
+
+    getData()
+  })
 
   return (
     <Box backgroundColor="#FFFFFF" borderRadius="25px" padding="15px">
