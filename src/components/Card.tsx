@@ -4,23 +4,33 @@ import { login } from '../services/login';
 import { DButton } from './DButton';
 import { api } from '../api';
 
+interface UserData {
+  email: string,
+  password: string,
+  name: string
+}
+
 export const Card = () => {
-  const [ email, setEmail ] = useState('');
+  const [ email, setEmail ] = useState<string>('');
+  const [ userData, setUserData ] = useState<null | UserData>();
 
   useEffect(() => {
     const getData = async () => {
-      const data = await api
-      console.log(data)
+      const data: any | UserData = await api
+      setUserData(data)
     }
 
     getData()
-  })
+  }, [])
+
+  console.log(userData)
 
   return (
     <Box backgroundColor="#FFFFFF" borderRadius="25px" padding="15px">
       <Center>
         <h1>Faça o login</h1>
       </Center>
+      <p>{userData?.name}</p>
       <Input placeholder="email" value={email} onChange={(event) => setEmail(event.target.value)} />
       <Input placeholder="password" />
       <Center>
