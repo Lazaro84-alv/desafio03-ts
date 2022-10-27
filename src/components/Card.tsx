@@ -27,11 +27,11 @@ export const Card = () => {
 
   return (
     <Box backgroundColor="#FFFFFF" borderRadius="25px" padding="15px">
-      { 
+      {/* { 
         userData === null || userData === undefined ? 
        <h1>Loading...</h1> :
        <h1>Informações carregadas</h1> 
-      }
+      } */}
       <Center>
         <h1>Faça o login</h1>
       </Center>

@@ -1,7 +1,7 @@
 const conta = {
   email: 'picles@dio.bank',
   password: '123456',
-  name: 'Picles Almeida'
+  name: ''
 }
 
 export const api = new Promise((resolve) => {
