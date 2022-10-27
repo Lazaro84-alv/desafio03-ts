@@ -1,6 +1,5 @@
-import { ChakraProvider, Box} from '@chakra-ui/react';
+import { Box} from '@chakra-ui/react';
 import { Card } from '../components/Card';
-import { Layout } from '../components/Layout';
 
 const Home = () => {
   return (

@@ -1,6 +1,35 @@
+import { Center, SimpleGrid } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import { api } from "../api";
+import CardInfo from "../components/CardInfo";
+interface UserData {
+  email: string,
+  password: string,
+  name: string,
+  balance: number
+}
+
 const Conta = () => {
+  const [ userData, setUserData ] = useState<null | UserData>();
+
+  useEffect(() => {
+    const getData = async () => {
+      const data: any | UserData = await api
+      setUserData(data)
+    }
+
+    getData()
+  }, [])
+
+  console.log(userData)
+
   return (
-    <h1>Conta</h1>
+    <Center>
+      <SimpleGrid columns={2} spacing={8} paddingTop={16}>
+       <CardInfo text="Informação de acesso" />
+       <CardInfo text="Informação da conta" />
+      </SimpleGrid>
+    </Center>
   )
 }
 
