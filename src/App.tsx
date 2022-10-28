@@ -2,6 +2,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import Conta from './pages/Conta';
+import ContaInfo from './pages/ContaInfo';
 
 import Home from './pages/Home';
 
@@ -13,7 +14,8 @@ function App() {
         <Layout>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/conta' element={<Conta />} />
+            <Route path='/conta/:id' element={<Conta />} />
+            <Route path='/infoconta' element={<ContaInfo />} />
           </Routes>
         </Layout>
       </ChakraProvider>
