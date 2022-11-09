@@ -1,4 +1,4 @@
-Formação TypeScript Developer - DIO
+Formação TypeScript Fullstack Developer - DIO
 
 ministrado por Nathally Souza
 
