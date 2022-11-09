@@ -8,6 +8,6 @@ const conta = {
 
 export const api = new Promise((resolve) => {
   setTimeout(() => {
-    resolve(conta)
+      resolve(conta)
   }, 3000)
 })
