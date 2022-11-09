@@ -13,7 +13,7 @@ interface UserData {
 }
 
 const Conta = () => {
-  const [ userData, setUserData ] = useState<null | UserData>();
+  const [ userData, setUserData ] = useState<null | UserData>()
   const { id } = useParams()
   const navigate = useNavigate()
 

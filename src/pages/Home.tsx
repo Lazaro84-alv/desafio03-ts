@@ -5,9 +5,10 @@ import { AppContext } from '../components/AppContext';
 import { Card } from '../components/Card';
 import DButton from '../components/DButton';
 import { login } from '../services/login';
+import { changeLocalStorage } from '../services/storage';
 
 const Home = () => {
-  const [ email, setEmail ] = useState<string>('');
+  const [ email, setEmail ] = useState<string>('')
   const { setIsLoggedIn } = useContext(AppContext)
   const navigate = useNavigate()
 
@@ -19,6 +20,7 @@ const Home = () => {
     }
 
     setIsLoggedIn(true)
+    changeLocalStorage({ login: true })
     navigate('/conta/1')
 
   }
