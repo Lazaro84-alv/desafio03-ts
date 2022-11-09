@@ -3,9 +3,12 @@ Formação TypeScript Developer - DIO
 ministrado por Nathally Souza
 
 Projeto desenvolvido com conceitos básicos de typescript
+
 Tecnologias
-Typescript
+- Typescript
+
 Como rodar o projeto
+
 1 - Clone o repositório
 
 2 - Instale as dependeências
